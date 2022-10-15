@@ -4,7 +4,6 @@ import { useState } from "react"
 import { fetchSentiment } from "../api/api";
 import { SearchContext } from "../contexts/SearchContext";
 import { m_sentiment } from "../models/Models";
-import Image from "next/image";
 
 export default function Sentiment() {
     const {state, dispatch} = useContext(SearchContext)
@@ -65,7 +64,7 @@ export default function Sentiment() {
         <div className="flex flex-col md:flex-row space-x-4">
             <div className="flex-col p-4 w-full border border-gray-200 shadow-md hover:bg-gray-100 rounded-lg">
                 <div className="flex flex-row space-x-2 items-center">
-                    <Image className="w-8" src="https://logodownload.org/wp-content/uploads/2018/02/reddit-logo-16.png" alt="" />
+                    <img className="w-8" src="https://logodownload.org/wp-content/uploads/2018/02/reddit-logo-16.png" alt="" />
                     <span className="text-xl font-bold">Reddit</span>
                 </div>
                 <p>
@@ -83,7 +82,7 @@ export default function Sentiment() {
             </div>
             <div className="flex-col p-4 w-full border border-gray-200 shadow-md hover:bg-gray-100 rounded-lg">
                 <div className="flex flex-row space-x-2 items-center">
-                    <Image className="w-8" src="https://cdn.cdnlogo.com/logos/t/96/twitter-icon.svg" alt="" />
+                    <img className="w-8" src="https://cdn.cdnlogo.com/logos/t/96/twitter-icon.svg" alt="" />
                     <span className="text-lg font-bold">Twitter</span>
                 </div>
                 <p>

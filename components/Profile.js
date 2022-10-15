@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react"
 import { fetchIndicators, fetchProfile } from "../api/api"
 import { SearchContext } from "../contexts/SearchContext"
 import Graph from "./Graph"
-import Image from "next/image"
 
 export default function Profile() {
     const { state, dispatch } = useContext(SearchContext)
@@ -34,7 +33,7 @@ export default function Profile() {
         <div className="flex flex-row flex-wrap border border-gray-200 shadow-md hover:bg-gray-100 rounded-lg p-4 space-y-2 justify-between">
             <div className="flex-col space-y-1 p-2">
                 <div className="flex flex-row space-x-2 items-center">
-                    <Image alt="" src={profile?.logo} className="w-12" />
+                    <img alt="" src={profile?.logo} className="w-12" />
                     <span className="font-bold text-3xl">{profile?.name}</span>
                 </div>
                 <p>
