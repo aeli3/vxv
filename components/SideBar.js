@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { fetchTickers } from "../api/api";
 import { SearchContext } from "../contexts/SearchContext";
+import Link from 'next/link'
 
 export default function SideBar() {
     const { state, dispatch } = useContext(SearchContext)
@@ -45,9 +46,11 @@ export default function SideBar() {
 
     return (
         <div className="flex flex-col space-y-4">
-            <a href="/">
-                <img src="vsb_logo.png" alt="" />
-            </a>
+            <Link href="/">
+                <a >
+                    <img src="vsb_logo.png" alt="" />
+                </a>
+            </Link>
             <form 
             onSubmit={e => {e.preventDefault(); handleSubmit(e.target[0].value)}}
             className="flex flex-col space-y-4"
@@ -74,7 +77,9 @@ export default function SideBar() {
                     }
                 </div>
                 <button type="submit" className="bg-gray-500 text-white hover:bg-white hover:text-black">Analyze</button>
-                <a href="/watchlist" className="bg-gray-500 text-white hover:bg-white hover:text-black text-center">Watchlist</a>
+                <Link href="/watchlist" >
+                    <a className="bg-gray-500 text-white hover:bg-white hover:text-black text-center">Watchlist</a>
+                </Link>
             </form>
         </div>
     )
